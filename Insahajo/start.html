@@ -25,6 +25,21 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+	.button {
+      background-color: #fca16a;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #ff7e00;
+    }
   </style>
 </head>
 <body>
@@ -32,7 +47,7 @@ img {
 <img src="title.PNG" alt="Title Image"> 
   <form id="userInfoForm">
     <center>이름: <input type="text" id="name"></center> 
-    <center><button type="button" onclick="submitForm()">Start</button></center>
+    <center><button ="button" onclick="submitForm()">Start</button></center>
   </form>
 
   <script>
