@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test - Question 14</title>
+<style>
+    @font-face {
+      font-family: 'TTTtangsbudaejjigaeB';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+    body {
+      background-color: #fae3d1;
+	color: #081c0c;
+      font-family: 'TTTtangsbudaejjigaeB';
+text-align: center;
+    }
+    #userInfoForm {
+      width: 50%;
+      margin: auto;
+    }
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button {
+      background-color: #fca16a;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #ff7e00;
+    }
+  </style>
+</head>
+<body>
+  <h1>Question 14</h1>
+  <p>나는 운동을 즐긴다.</p>
+    <input type="radio" name="question1" value="5"> 매우 그렇다
+    <input type="radio" name="question1" value="4"> 그렇다
+    <input type="radio" name="question1" value="3"> 보통
+    <input type="radio" name="question1" value="2"> 그렇지 않다
+    <input type="radio" name="question1" value="1"> 매우 그렇지 않다<br><br>
+  <button class="button" onclick="submitAnswer()">Next</button>
+
+  <script>
+    function submitAnswer() {
+      var radios = document.getElementsByName('question1');
+      var calculatedScore;
+      for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+          calculatedScore = radios[i].value;
+          break;
+        }
+      }
+      sessionStorage.setItem('score14', calculatedScore);
+      window.location.href = 'question15.html';
+    }
+  </script>
+</body>
+</html>

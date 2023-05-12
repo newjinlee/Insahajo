@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test - Start</title>
+<style>
+    @font-face {
+      font-family: 'TTTtangsbudaejjigaeB';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+    body {
+      background-color: #fae3d1;
+	color: #081c0c;
+      font-family: 'TTTtangsbudaejjigaeB';
+    }
+    #userInfoForm {
+      width: 50%;
+      margin: auto;
+    }
+	h1{text-align: center;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  </style>
+</head>
+<body>
+  <h1>세종대 축제 부스 추천 유형 테스트</h1>
+<img src="C:\Users\augus\Desktop\인커톤결과\title.PNG" alt="Title Image"> 
+  <form id="userInfoForm">
+    <center>이름: <input type="text" id="name"></center> 
+    <center><button type="button" onclick="submitForm()">Start</button></center>
+  </form>
+
+  <script>
+    function submitForm() {
+      sessionStorage.setItem('name', document.getElementById('name').value);
+      window.location.href = 'question1.html';
+    }
+  </script>
+</body>
+</html>
